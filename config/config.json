@@ -1,0 +1,60 @@
+{
+    "models": {
+        "supported": [
+            {
+                "name": "Mistral 7B int4",
+                "installed": false,
+                "metadata": {
+                    "model_path": "model/mistral/mistral7b_int4_engine",
+                    "engine": "llama_float16_tp1_rank0.engine",
+                    "tokenizer_path": "model/mistral/mistral7b_hf",
+                    "max_new_tokens": 1024,
+                    "max_input_token": 7168,
+                    "temperature": 0.1
+                }
+            },
+            {
+                "name": "Llama 2 13B int4",
+                "installed": false,
+                "metadata": {
+                    "model_path": "model/llama/llama13_int4_engine",
+                    "engine": "llama_float16_tp1_rank0.engine",
+                    "tokenizer_path": "model/llama/llama13_hf",
+                    "max_new_tokens": 1024,
+                    "max_input_token": 3900,
+                    "temperature": 0.1
+                }
+            }
+        ],
+        "selected": "Mistral 7B int4"
+    },
+    "sample_questions": [
+        {
+            "query": "How does NVIDIA ACE generate emotional responses?"
+        },
+        {
+            "query": "What is Portal prelude RTX?"
+        },
+        {
+            "query": "What is important about Half Life 2 RTX?"
+        },
+        {
+            "query": "When is the launch date for Ratchet & Clank: Rift Apart on PC?"
+        }
+    ],
+    "dataset": {
+        "sources": [
+            "directory",
+            "youtube",
+            "nodataset"
+        ],
+        "selected": "directory",
+        "path": "dataset",
+        "isRelative": true
+    },
+    "strings": {
+        "directory": "Folder Path",
+        "youtube": "YouTube URL",
+        "nodataset": "AI model default"
+    }
+}

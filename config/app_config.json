@@ -1,0 +1,7 @@
+{
+    "streaming": true,
+    "similarity_top_k": 4,
+    "is_chat_engine": false,
+    "embedded_model": "WhereIsAI/UAE-Large-V1",
+    "embedded_dimension": 1024
+}

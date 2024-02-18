@@ -1,0 +1,143 @@
+/*
+// SPDX-FileCopyrightText: Copyright (c) 2024 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+// SPDX-License-Identifier: MIT
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the "Software"),
+// to deal in the Software without restriction, including without limitation
+// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+// and/or sell copies of the Software, and to permit persons to whom the
+// Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
+*/
+
+footer {
+    display:none !important
+}
+
+.icon-button {
+    border-width: 0px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-width: 40px !important;
+    height: 40px !important;
+    img {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+.icon-button img {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.margin-8p {
+    margin: 8px !important;
+}
+
+.padding-8p {
+    padding: 8px;
+}
+
+.height-38p {
+    height: 38px;
+}
+
+.border-292929 {
+    border-color: #292929 !important
+}
+
+.height-40p {
+    height: 40px;
+}
+
+.margin-right-8p {
+    margin-right: 8px !important;
+}
+
+.margin-bottom-8p {
+    margin-bottom: 8px !important;
+}
+
+.margin-bottom-48p {
+    margin-bottom: 48px !important;
+}
+
+.description-secondary-markdown p {
+    color: rgba(255,255,255,.75) !important;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.shutdown-group {
+    height: 700px;
+    justify-content: center;
+}
+
+.chat-window {
+    height: 500px !important;
+    .message-row {
+        .message {
+            width: calc(100% - 44px) !important;
+        }
+    }
+    .message-row button {
+        cursor: default;
+    }
+}
+
+.dataset-column {
+    min-width: 500px !important;
+}
+
+.dataset-goup,
+.model-goup
+{
+    min-height: 166.5px !important;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #343434;
+    color: #e8e8e8;
+    padding: 5px;
+    display: none;
+    z-index: 999;
+    font-family: 'NVIDIA Sans';
+    font-size: var(--text-md);
+}
+
+.sample-question-button {
+    border: var(--button-border-width) solid rgb(94, 94, 94) !important;
+    font-size: var(--text-md) !important;
+    font-weight: 400 !important;
+    height: 42px !important;
+}
+
+.chat-disclaimer-message {
+    font-size: 12px !important;
+    text-align: center;
+}
+
+/* Global elements */
+a {
+    color: #76b900 !important;
+    text-decoration: none !important;
+}
+
+.progress-text {
+    display: none;
+}
