@@ -184,8 +184,7 @@ class TrtLlmAPI(CustomLLM):
                                       input_text,
                                       pad_id=self._pad_id,
                                       )
-        input_lengths = [x.size(1) for x in batch_input_ids]
-
+        input_lengths = [x.size(0) for x in batch_input_ids]
         with torch.no_grad():
             outputs = self._model.generate(
                 batch_input_ids,
@@ -251,7 +250,7 @@ class TrtLlmAPI(CustomLLM):
                           base_vocab_size + length)) + batch_input_ids[i]
 
         batch_input_ids = [
-            torch.tensor(x, dtype=torch.int32).unsqueeze(0) for x in batch_input_ids
+            torch.tensor(x, dtype=torch.int32) for x in batch_input_ids
         ]
         return batch_input_ids
 
@@ -290,10 +289,10 @@ class TrtLlmAPI(CustomLLM):
         return output_text, output_ids
 
     def get_output(self, output_ids, input_lengths, max_output_len, tokenizer):
-        num_beams = 1
+        batch_size, num_beams, _ = output_ids.size()
         output_text = ""
         outputs = None
-        for b in range(input_lengths.size(0)):
+        for b in range(batch_size):
             for beam in range(num_beams):
                 output_begin = input_lengths[b]
                 output_end = input_lengths[b] + max_output_len
@@ -342,7 +341,8 @@ class TrtLlmAPI(CustomLLM):
                                       input_text,
                                       pad_id=self._end_id,
                                       )
-        input_lengths = [x.size(1) for x in batch_input_ids]
+        input_lengths = [x.size(0) for x in batch_input_ids]
+
         with torch.no_grad():
             outputs = self._model.generate(
                 batch_input_ids,
